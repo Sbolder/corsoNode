@@ -6,17 +6,21 @@
   "scripts": {
     "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
     "start": "fastify start -l info app.js",
-    "dev": "fastify start -l info -P app.js"
+    "dev": "fastify start -l info -P app.js ",
+    "mongo": "docker run -p 27017:27017 mongo:4.0.3"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@matteo.collina/fastify-auth-mongo-jwt": "^0.1.2",
     "fastify": "^1.11.0",
-    "fastify-plugin": "^1.2.0",
     "fastify-autoload": "^0.5.0",
-    "fastify-cli": "^0.22.1"
+    "fastify-cli": "^0.22.1",
+    "fastify-mongodb": "^0.9.0",
+    "fastify-plugin": "^1.2.0"
   },
   "devDependencies": {
+    "mongo-clean": "^2.0.0",
     "tap": "^12.0.0"
   }
 }

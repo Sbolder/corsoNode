@@ -2,6 +2,7 @@
 
 const path = require('path')
 const AutoLoad = require('fastify-autoload')
+const AuthMongoJwt = require('./services/auth');
 
 module.exports = function (fastify, opts, next) {
   // Place here your custom code!
@@ -15,6 +16,7 @@ module.exports = function (fastify, opts, next) {
     dir: path.join(__dirname, 'plugins'),
     options: Object.assign({}, opts)
   })
+
 
   // This loads all plugins defined in services
   // define your routes in one of these
